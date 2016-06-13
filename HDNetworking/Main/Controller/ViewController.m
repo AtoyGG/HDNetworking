@@ -28,6 +28,16 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    [[HDNetworking sharedHDNetworking] networkStatusUnknown:^{
+        NSLog(@"Unknown");
+    } reachable:^{
+        NSLog(@"reachable");
+    } reachableViaWWAN:^{
+        NSLog(@"WWAN");
+    } reachableViaWiFi:^{
+        NSLog(@"WiFi");
+    }];
+
     [[HDNetworking sharedHDNetworking] downLoadWithURL:@"http://sc.111ttt.com/up/mp3/304296/937161E63A1D57484158C7464D7B50B7.mp3" progress:^(NSProgress * _Nullable progress) {
         
         HDLog(@"progress == %@", progress);

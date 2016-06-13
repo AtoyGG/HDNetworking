@@ -82,7 +82,7 @@ HDSingletonH(HDNetworking) // 单例声明
  *  @param success    发送成功的回调
  *  @param failure    发送失败的回调
  */
-- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters andPicArray:(NSArray *)picArray progress:(Progress)progress success:(Success)success failure:(Failure)failure;
+- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters andPicArray:(NSArray<HDPicModle *> *)picArray progress:(Progress)progress success:(Success)success failure:(Failure)failure;
 
 /**
  *  封装POST图片上传(单张图片) // 可扩展成单个别的数据上传如:mp3等

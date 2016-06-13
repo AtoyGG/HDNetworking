@@ -20,6 +20,7 @@
 // 由弧度获取角度
 #define HDRadianToDegrees(radian) (radian * 180.0) / (M_PI)
 
+#define HDNotificationCenter [NSNotificationCenter defaultCenter]
 #define HDUserDefaults [NSUserDefaults standardUserDefaults]
 #define HDKeyWindow [UIApplication sharedApplication].keyWindow
 #define HDRootViewController HDKeyWindow.rootViewController

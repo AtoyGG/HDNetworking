@@ -51,6 +51,9 @@ HDSingletonM(HDNetworking) // 单例实现
                 break;
         }
     }] ;
+    
+    // 开始监听网络状况
+    [manager startMonitoring];
 }
 
 /**
@@ -149,7 +152,7 @@ HDSingletonM(HDNetworking) // 单例实现
  *  @param success    发送成功的回调
  *  @param failure    发送失败的回调
  */
-- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters andPicArray:(NSArray *)picArray progress:(Progress)progress success:(Success)success failure:(Failure)failure
+- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters andPicArray:(NSArray<HDPicModle *> *)picArray progress:(Progress)progress success:(Success)success failure:(Failure)failure
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     

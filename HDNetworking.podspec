@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HDNetworking"
-  s.version      = "1.0.1"
+  s.version      = "1.1.0"
   s.summary      = "A simple web request"
   s.homepage     = "https://github.com/HeDong1117/HDNetworking"
   s.license      = "MIT"
